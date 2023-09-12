@@ -1,0 +1,6 @@
+<div>
+  <!-- <ol>
+    <li *ngFor="let student of mockData">{{student}}</li>
+  </ol> -->
+  <app-student-card *ngFor="let student of mockData"  [studentData]="student"></app-student-card>
+</div>

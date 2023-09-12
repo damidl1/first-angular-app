@@ -1,0 +1,10 @@
+ng new first-angular-app --directory ./     per creare nuovo progetto
+
+ng serve --o   per fare partire il server mentre sto facendo sviluppo
+
+ng build   per creare la dist per il sito, se rifaccio build cancella quella precedente e la aggiorna con quella attuale
+
+ng g c header     per generare ad esempio un nuovo componente header
+
+
+ng g c components/footer   per creare un componente direttamente in una cartella specifica, mettere prima del nome del componente il nome della cartella
