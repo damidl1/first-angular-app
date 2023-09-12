@@ -13,11 +13,7 @@ export class MainComponent {
       surname: 'di lionardo',
       age: 30,
       imageUrl: 'https://www.newscinema.it/wp-content/uploads/2023/05/pascal-min.jpeg'
-    },
-    {
-
-    },
-
+    }
   ];
 
 
