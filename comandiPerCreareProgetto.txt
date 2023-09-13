@@ -8,3 +8,6 @@ ng g c header     per generare ad esempio un nuovo componente header
 
 
 ng g c components/footer   per creare un componente direttamente in una cartella specifica, mettere prima del nome del componente il nome della cartella
+
+
+npm i   per installare quando si clona un progetto già esistente
