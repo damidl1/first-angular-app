@@ -1,0 +1,27 @@
+.main-container{
+  display:flex ;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.controls-container{
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.card-container{
+  display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 16px;
+}
+
+.slider{
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0px 2px;
+}

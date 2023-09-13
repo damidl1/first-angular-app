@@ -1,4 +1,5 @@
-<div *ngIf="studentData">
-  <h3>Nome dello studente: {{studentData.name}}</h3>
-  <p>Voto 10</p>
+<div class="card" *ngIf="studentData">
+  <img src="{{studentData.imageUrl}}" alt="">
+  <h3>{{studentData.name}} {{studentData.surname}}</h3>
+  <span>Età: {{studentData.age}}</span>
 </div>

@@ -1,6 +1,21 @@
-<div>
-  <!-- <ol>
-    <li *ngFor="let student of mockData">{{student}}</li>
-  </ol> -->
-  <app-student-card *ngFor="let student of mockData"  [studentData]="student"></app-student-card>
+<div class="main-container">
+
+  <div class="controls-container">
+
+    <button (click)="randomize()">Randomizza</button>
+    <div class="slider">
+      <label for="gruppi">{{groupNumber}} Gruppi</label>
+      <input [(ngModel)]="groupNumber" type="range" name="gruppi" id="gruppi" min="1" max="10">
+    </div>
+  </div>
+
+
+
+  <div class="card-container">
+
+    <!-- <ol>
+      <li *ngFor="let student of mockData">{{student}}</li>
+    </ol> -->
+    <app-student-card *ngFor="let student of mockData" [studentData]="student"></app-student-card>
+  </div>
 </div>
