@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Student } from '../model/student';
+import { ConnectionService } from './connection.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
+  studentsArray: Student[] = [];
 
-  constructor() { }
-
-  getStudents(): Promise<Student[]> {
-    return fetch('./assets/students.json').then(resp => resp.json())
+  constructor(private connServ: ConnectionService) {
+    this.connServ.getStudents().then(students => {
+      this.studentsArray.push(...students);
+    })
   }
+
+  addStudent(student: Student){
+    this.studentsArray.push(student);
+    console.log(this.studentsArray);
+  }
+
 }
+

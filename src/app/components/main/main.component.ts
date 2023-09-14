@@ -20,12 +20,11 @@ export class MainComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.dataServ.getStudents().then(students => {
-      this.studentsData = students;
-      this.createGroups();
-    })
-
+    this.studentsData = this.dataServ.studentsArray;
+    this.createGroups();
   }
+
+
 
   randomize(): void{
     const tempArray = [];
@@ -100,4 +99,12 @@ export class MainComponent implements OnInit{
     // console.log(this.groups);
   }
 
+  removeStudent(student: Student): void{
+    this.studentsData = this.studentsData.filter(s => s.id !== student.id);
+    this.createGroups();
+  }
+
+  log(){
+    console.log(this.studentsData)
+  }
 }

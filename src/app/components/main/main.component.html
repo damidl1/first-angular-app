@@ -4,9 +4,10 @@
 
     <button (click)="randomize()">Randomizza</button>
     <div class="slider">
-      <label for="gruppi">{{groupNumber}} Gruppi</label>
+      <label for="gruppi">{{groupNumber}} Grupp{{groupNumber === 1 ? 'o' : 'i'}}</label>
       <input [(ngModel)]="groupNumber" type="range" name="gruppi" id="gruppi" min="1" max="10" (ngModelChange)="createGroups()">
     </div>
+    <button (click)="log()">log students</button>
   </div>
 
 
@@ -16,7 +17,7 @@
     <div class="group-div" *ngFor="let group of groups; let i = index">
       <h2>Gruppo {{i + 1}}</h2>
       <div class="group-container">
-        <app-student-card *ngFor="let student of group" [studentData]="student"></app-student-card>
+        <app-student-card *ngFor="let student of group" [studentData]="student" (absent)="removeStudent($event)"></app-student-card>  <!-- $event a questa funzione arriverà come parametro quello chye l'evento absent si porta dietro -->
       </div>
 
     </div>

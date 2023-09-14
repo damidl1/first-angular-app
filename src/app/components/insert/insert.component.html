@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <label>id: </label>
+    <input [(ngModel)]="newStudent.id" type="number">
+  </div>
+  <div>
+    <label>nome: </label>
+    <input [(ngModel)]="newStudent.name" type="text">
+  </div>
+  <div>
+    <label>cognome: </label>
+    <input [(ngModel)]="newStudent.surname" type="text">
+  </div>
+  <div>
+    <label>età: </label>
+    <input [(ngModel)]="newStudent.age" type="number">
+  </div>
+  <div>
+    <label>immagine: </label>
+    <input [(ngModel)]="newStudent.imageUrl" type="text">
+  </div>
+  <button (click)="saveStudent()">Salva</button>
+</div>
