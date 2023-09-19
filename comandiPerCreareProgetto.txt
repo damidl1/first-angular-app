@@ -11,3 +11,5 @@ ng g c components/footer   per creare un componente direttamente in una cartella
 
 
 npm i   per installare quando si clona un progetto già esistente
+
+ng g pipe  per creare un pipe custom
